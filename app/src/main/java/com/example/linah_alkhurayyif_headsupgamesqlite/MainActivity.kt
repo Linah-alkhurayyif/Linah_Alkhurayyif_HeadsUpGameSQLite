@@ -1,0 +1,21 @@
+package com.example.linah_alkhurayyif_headsupgamesqlite
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        game.setOnClickListener {
+            intent = Intent(applicationContext, headsUp::class.java)
+            startActivity(intent)
+        }
+        home.setOnClickListener {
+            intent = Intent(applicationContext, ViewCelebritie::class.java)
+            startActivity(intent)
+        }
+    }
+}
